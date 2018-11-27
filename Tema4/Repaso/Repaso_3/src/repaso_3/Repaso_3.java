@@ -1,21 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package repaso_3;
 
-/**
- *
- * @author Adam
- */
+import java.util.Scanner;
+
 public class Repaso_3 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void RellenarVector(int vector[]) {
+        Scanner entrada = new Scanner(System.in);
+        for (int i = 0; i < vector.length; i++) {
+            System.out.print("Ingrese un valor para el array: ");
+            vector[i] = entrada.nextInt();
+        }
+    }
+
+    public static void BuscarParesEImpares(int vector[]) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Ingrese un valor par o impar: ");
+        int numero = entrada.nextInt();
+        if (numero % 2 == 0) {
+            for (int i = 0; i < vector.length; i++) {
+                if (vector[i] % 2 == 0) {
+                    System.out.println(vector[i]);
+                }
+            }
+        } else if (numero % 2 != 0) {
+            for (int i = 0; i < vector.length; i++) {
+                if (vector[i] % 2 != 0) {
+                    System.out.println(vector[i]);
+                }
+            }
+        }
     }
     
+    public static void main(String[] args) {
+        int vector[] = new int[20];
+        RellenarVector(vector);
+        BuscarParesEImpares(vector);
+    }
+
 }
