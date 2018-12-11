@@ -206,6 +206,12 @@ public class Tema5_1 {
         } else {
             System.out.println("Persona 2 es menor de edad");
         }
+
+        if (persona_3.esMayorDeEdad() == true) {
+            System.out.println("Persona 3 es mayor de edad");
+        } else {
+            System.out.println("Persona 3 es menor de edad");
+        }
     }
 
 }
